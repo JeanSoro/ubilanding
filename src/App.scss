@@ -1,21 +1,22 @@
 @import-normalize;
 
+
+
 .ubiheader {
     background: #000;
     color: #FFF;
 
     .ubinav {
 
-
         .ubinav__list {
             list-style: none;
-            padding: 15px 0px;
+            padding: 1.5rem 0rem;
             margin: 0px;
             justify-content: center;
 
             .ubinav__listitem {
                 text-transform: uppercase;
-                margin-right: 35px;
+                margin-right: 3.5rem;
             }
         }
     }
@@ -25,13 +26,13 @@
 // More Games section
 .more-games {
 
-    padding: 30px 20px;
+    padding: 3rem 2rem;
 
 
     .more-games__grid {
-        padding: 0px 20px;
+        padding: 0rem 2rem;
         display: grid;
-        grid-column-gap: 35px;
+        grid-column-gap: 3.5rem;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
         .game-poster {
@@ -40,12 +41,12 @@
         }
 
         .game-title {
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 600;
         }
 
         .game-year {
-            font-size: 14px;
+            font-size: 1.4rem;
             color: gray;
         }
     }
@@ -53,10 +54,10 @@
 }
 
 .featured-videos {
-    padding: 30px 20px;
+    padding: 3rem 2rem;
 
     .featured-videos__grid {
-        padding: 0px 20px;
+        padding: 0rem 2rem;
         display: grid;
         grid-column-gap: 75px;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -67,26 +68,26 @@
         }
 
         .video-title {
-            font-size: 16px;
+            font-size: 1.6rem;
             font-weight: 600;
         }
     }
 }
 
 .section-title {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 2.5rem;
     color: #000;
     text-transform: uppercase;
 }
 
 .section-title__featured {
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
     color: #000;
     text-transform: uppercase;
 }
@@ -96,16 +97,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
 
     .btn-rounded {
-        font-size: 16px;
+        font-size: 1.6rem;
         background-color: #ff5d5d;
         color: #FFF;
         text-transform: uppercase;
-        padding: 10px 40px;
+        padding: 1rem 4rem, ;
         width: auto;
         border: 1px solid #ff5d5d;
-        border-radius: 20px;
+        border-radius: 2rem;
     }
 }
