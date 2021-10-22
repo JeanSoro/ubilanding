@@ -1,6 +1,7 @@
 import React from 'react'
 import Videos from './Videos'
 import featuredVideosData from '../featuredVideosData';
+import download from '../download.svg'
 
 
 export default function FeaturedVideos() {
@@ -11,13 +12,14 @@ export default function FeaturedVideos() {
             <div className="featured-videos__grid">
                 {
                     featuredVideosData.map((featuredVideo, index) => {
-                        console.log(featuredVideo)
                         return (
-                            <Videos key={featuredVideo.id} {...featuredVideo} />
+                            <Videos key={index} download={download} {...featuredVideo} />
                         )
                     })
                 }
             </div>
+
+
 
 
             <div className="btn-container">
