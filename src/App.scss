@@ -1,0 +1,111 @@
+@import-normalize;
+
+.ubiheader {
+    background: #000;
+    color: #FFF;
+
+    .ubinav {
+
+
+        .ubinav__list {
+            list-style: none;
+            padding: 15px 0px;
+            margin: 0px;
+            justify-content: center;
+
+            .ubinav__listitem {
+                text-transform: uppercase;
+                margin-right: 35px;
+            }
+        }
+    }
+}
+
+
+// More Games section
+.more-games {
+
+    padding: 30px 20px;
+
+
+    .more-games__grid {
+        padding: 0px 20px;
+        display: grid;
+        grid-column-gap: 35px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .game-poster {
+            height: 310px;
+            width: 100%;
+        }
+
+        .game-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .game-year {
+            font-size: 14px;
+            color: gray;
+        }
+    }
+
+}
+
+.featured-videos {
+    padding: 30px 20px;
+
+    .featured-videos__grid {
+        padding: 0px 20px;
+        display: grid;
+        grid-column-gap: 75px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+        .video-poster {
+            height: 245px;
+            width: 100%;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+}
+
+.section-title {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.section-title__featured {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+    .btn-rounded {
+        font-size: 16px;
+        background-color: #ff5d5d;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 10px 40px;
+        width: auto;
+        border: 1px solid #ff5d5d;
+        border-radius: 20px;
+    }
+}
