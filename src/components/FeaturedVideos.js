@@ -5,7 +5,6 @@ import RoundedButton from './RoundedButton';
 import featuredVideosData from '../featuredVideosData';
 import playIcon from '../download.svg';
 
-
 export default function FeaturedVideos({ toggleModal }) {
     return (
         <section className="featured-videos">

@@ -5,8 +5,8 @@ $primary-black: #101010;
 $primary-white: #FFF;
 $section-background: #eff5f3;
 $muted-gray: #808080;
-$navigation-arrows-background: #EEEEEECF;
-
+$navigation-arrows-background: #eaf0ee;
+$navigation-arrows-color: #e2e1e7;
 $rounded-button-background: #e22278;
 $rounded-button-background-hover: #ea0069;
 
@@ -30,8 +30,8 @@ $rounded-button-background-hover: #ea0069;
 
 @mixin navigation-arrows-container-styles {
     border: none;
-    color: #e2e1e7;
-    background: #eaf0ee;
+    color: $navigation-arrows-color;
+    background: $navigation-arrows-background;
     width: 5.5rem;
     height: 5rem;
     display: flex;
@@ -39,6 +39,8 @@ $rounded-button-background-hover: #ea0069;
     align-items: center;
     cursor: pointer;
 }
+
+
 
 .ubiheader {
     background: $primary-black;
@@ -66,6 +68,7 @@ $rounded-button-background-hover: #ea0069;
             display: flex;
             flex-wrap: wrap;
             list-style: none;
+            font-size: 1.5rem;
             padding: 1rem 0rem;
             margin: 0px;
             justify-content: center;
@@ -272,7 +275,9 @@ $rounded-button-background-hover: #ea0069;
             transition: background-color .1s linear;
 
             &:hover {
-                background-color: rgb(74, 74, 74)
+                background-color: $primary-white;
+                color: $primary-black;
+                border: .2rem solid $primary-black;
             }
         }
 
@@ -311,3 +316,60 @@ $rounded-button-background-hover: #ea0069;
 }
 
 // Modal styles end
+
+// Mobile menu styles start
+
+.mobile-menu {
+    background: $primary-black;
+    color: $primary-white;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 8.5rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 100vh;
+    -webkit-transform: translate3d(-200%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+    ul {
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li {
+        text-transform: uppercase;
+        list-style: none;
+        font-size: 1.8rem;
+        margin-bottom: 6rem;
+    }
+
+    &.active {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+
+    }
+
+    .btn-close-mobile-menu {
+        position: absolute;
+        left: 83%;
+        color: $primary-white;
+        border: 2px solid $primary-white;
+        background-color: $primary-black;
+        font-size: 1.8rem;
+        border-radius: 2.5rem;
+        width: 4rem;
+        height: 4rem;
+        top: 3%;
+    }
+}
+
+// Mobile menu styles end

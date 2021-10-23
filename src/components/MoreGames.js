@@ -7,7 +7,8 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 export default function MoreGames() {
     const [gamesShow, setGamesShow] = useState(gamesData);
     const newGamesShow = [...gamesShow];
- 
+
+    // Handler for getting previous set of video game cards
     const viewPrev = () => {
         if (newGamesShow.length - 1 > 0) {
             setGamesShow(newGamesShow.slice(5, 9))
@@ -16,6 +17,7 @@ export default function MoreGames() {
         }
     }
 
+    // Handler for getting next set of video game cards
     const viewNext = () => {
         if (newGamesShow.length === 4 || newGamesShow.length === 0) {
             setGamesShow(gamesData)
@@ -39,15 +41,15 @@ export default function MoreGames() {
                 }
             </div>
             <div className="slider-controls">
-               <button type="button" className="arrow-container">
-                    <FaChevronLeft className="arrow" onClick={viewPrev}/>
-               </button>
+                <button type="button" className="arrow-container">
+                    <FaChevronLeft className="arrow" onClick={viewPrev} />
+                </button>
                 <div className="btn-container">
                     <RoundedButton btnText="view all games" />
                 </div>
                 <button type="button" className="arrow-container__right">
-                    <FaChevronRight className="arrow" onClick={viewNext}/>
-               </button>
+                    <FaChevronRight className="arrow" onClick={viewNext} />
+                </button>
             </div>
         </section>
     )
