@@ -6,29 +6,23 @@ import FeaturedVideos from './components/FeaturedVideos';
 import Modal from './components/Modal';
 
 
-
-
 function App() {
 
   const [showModal, setShowModal] = useState(false);
   const [ids, setIds] = useState(1);
-  const [titles, setTitles] = useState('');
-  const [images, setImages] = useState('');
-
+  const [featuredVideoTitle, setFeaturedVideoTitle] = useState('');
+  const [featuredVideoPoster, setFeaturedVideoPoster] = useState('');
 
   const toggleModal = (id, title, image) => {
     setShowModal(prev => !prev);
     setIds(id)
-    setTitles(title)
-    setImages(image)
-
+    setFeaturedVideoTitle(title)
+    setFeaturedVideoPoster(image)
   }
 
   const closeModal = () => {
     setShowModal(false)
   }
-
-
 
 
   return (
@@ -38,10 +32,9 @@ function App() {
         <MoreGames />
         <FeaturedVideos toggleModal={toggleModal} />
         {
-          showModal ? <Modal images={images} titles={titles} ids={ids} closeModal={closeModal} /> : null
+          showModal ? <Modal featuredVideoPoster={featuredVideoPoster} featuredVideoTitle={featuredVideoTitle} closeModal={closeModal} /> : null
         }
       </main>
-
     </>
   );
 }

@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import Games from './Games'
-import games from '../games';
+import gamesData from '../gamesData';
 
 export default function MoreGames() {
-    const [gamesShow, setGamesShow] = useState(games)
+    const [gamesShow, setGamesShow] = useState(gamesData)
     const newGamesShow = [...gamesShow];
     console.log(newGamesShow)
 
@@ -11,13 +11,13 @@ export default function MoreGames() {
         if (newGamesShow.length - 1 > 0) {
             setGamesShow(newGamesShow.slice(5, 9))
         } else if (newGamesShow.length === 4 || newGamesShow.length === 0) {
-            setGamesShow(games)
+            setGamesShow(gamesData)
         }
     }
 
     const viewNext = () => {
         if (newGamesShow.length === 4 || newGamesShow.length === 0) {
-            setGamesShow(games)
+            setGamesShow(gamesData)
         } else if (newGamesShow.length - 1 > 0) {
             setGamesShow(newGamesShow.slice(5, 9))
         }
@@ -26,7 +26,6 @@ export default function MoreGames() {
     return (
         <section className="more-games">
             <h1 className="section-title">Explore more games</h1>
-
             <div className="more-games__grid">
 
                 {

@@ -1,5 +1,5 @@
 
-const games = [
+const gamesData = [
     {
         id: 1,
         title: 'Prince of Persia: The Sands of Time Remake',
@@ -82,7 +82,6 @@ const games = [
             "./assets/windows.svg",
         stadia_logo:
             "./assets/stadia.svg"
-
     },
     {
         id: 7,
@@ -98,7 +97,6 @@ const games = [
             "./assets/windows.svg",
         stadia_logo:
             "./assets/stadia.svg"
-
     },
     {
         id: 8,
@@ -145,4 +143,4 @@ const games = [
 
 ];
 
-export default games;
+export default gamesData;

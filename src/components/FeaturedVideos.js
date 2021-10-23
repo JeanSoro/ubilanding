@@ -1,7 +1,7 @@
 import React from 'react'
 import Videos from './Videos'
 import featuredVideosData from '../featuredVideosData';
-import download from '../download.svg'
+import playIcon from '../download.svg'
 
 
 export default function FeaturedVideos({ toggleModal }) {
@@ -11,14 +11,17 @@ export default function FeaturedVideos({ toggleModal }) {
 
             <div className="featured-videos__grid">
                 {
-                    featuredVideosData.map((featuredVideo, index) => {
+                    featuredVideosData.map((featuredVideoData, index) => {
                         return (
-                            <Videos key={index} download={download} {...featuredVideo} toggleModal={toggleModal} />
+                            <Videos key={index}
+                                playIcon={playIcon}
+                                {...featuredVideoData}
+                                toggleModal={toggleModal}
+                            />
                         )
                     })
                 }
             </div>
-
 
             <div className="btn-container">
                 <button type="button" className="btn-rounded">
