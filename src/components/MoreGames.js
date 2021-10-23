@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import Games from './Games'
+import RoundedButton from './RoundedButton';
 import gamesData from '../gamesData';
 
 export default function MoreGames() {
     const [gamesShow, setGamesShow] = useState(gamesData)
     const newGamesShow = [...gamesShow];
-    console.log(newGamesShow)
-
+ 
     const viewPrev = () => {
         if (newGamesShow.length - 1 > 0) {
             setGamesShow(newGamesShow.slice(5, 9))
@@ -25,9 +25,10 @@ export default function MoreGames() {
 
     return (
         <section className="more-games">
-            <h1 className="section-title">Explore more games</h1>
+            <header>
+                <h1 className="section-title">Explore more games</h1>
+            </header>
             <div className="more-games__grid">
-
                 {
                     newGamesShow.slice(0, 6).map((gamesList, index) => {
                         return (
@@ -36,13 +37,12 @@ export default function MoreGames() {
                     })
                 }
             </div>
-
             <div className="slider-controls">
-                <div className="arrow" onClick={viewPrev}></div>
+                <button type="button" className="arrow" onClick={viewPrev}></button>
                 <div className="btn-container">
-                    <button type="button" className="btn-rounded">view all games</button>
+                    <RoundedButton btnText="view all games" />
                 </div>
-                <div className="arrow--right" onClick={viewNext}></div>
+                <button type="button" className="arrow--right" onClick={viewNext}></button>
             </div>
         </section>
     )

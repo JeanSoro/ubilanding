@@ -1,16 +1,19 @@
 import React from 'react'
+import menuLinksData from '../menuLinksData' ;
 
 export default function Header() {
+    
+    const renderMenuLinks = menuLinksData.map((menuLink,index)=> {
+        return(
+            <li key={index} className="ubinav__listitem">{menuLink}</li>
+        )
+    })
+
     return (
         <header className="ubiheader">
             <nav className="ubinav">
                 <ul className="ubinav__list">
-                    <li className="ubinav__listitem">uplay+</li>
-                    <li className="ubinav__listitem">store</li>
-                    <li className="ubinav__listitem">more games</li>
-                    <li className="ubinav__listitem">news</li>
-                    <li className="ubinav__listitem">forum</li>
-                    <li className="ubinav__listitem">support</li>
+                    {renderMenuLinks}
                 </ul>
             </nav>
         </header>

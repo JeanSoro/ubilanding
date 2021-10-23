@@ -1,14 +1,13 @@
 import React from 'react'
-import Videos from './Videos'
+import Videos from './Videos';
+import RoundedButton from './RoundedButton';
 import featuredVideosData from '../featuredVideosData';
 import playIcon from '../download.svg'
-
 
 export default function FeaturedVideos({ toggleModal }) {
     return (
         <section className="featured-videos">
             <h1 className="section-title__featured">featured videos</h1>
-
             <div className="featured-videos__grid">
                 {
                     featuredVideosData.map((featuredVideoData, index) => {
@@ -22,11 +21,8 @@ export default function FeaturedVideos({ toggleModal }) {
                     })
                 }
             </div>
-
             <div className="btn-container">
-                <button type="button" className="btn-rounded">
-                    view all trailers
-            </button>
+                <RoundedButton btnText="view all trailers" />
             </div>
         </section>
     )

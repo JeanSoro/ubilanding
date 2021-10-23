@@ -1,5 +1,5 @@
 import React from 'react'
-
+import playIcon from '../download.svg'
 
 export default function Modal({ closeModal, featuredVideoTitle, featuredVideoPoster }) {
 
@@ -8,9 +8,9 @@ export default function Modal({ closeModal, featuredVideoTitle, featuredVideoPos
         <div className="modal">
             <div className="modal-content-wrapper">
                 <button className="btn-close" onClick={closeModal}>X</button>
-                <span className="btn-play">play</span>
+                <img className="btn-play" src={playIcon} alt="play button icon" />
                 <h1 className="modal-content-title">{featuredVideoTitle}</h1>
-                <img src={featuredVideoPoster} alt="" />
+                <img className="modal-content-poster" src={featuredVideoPoster} alt="" />
             </div>
         </div>
     )

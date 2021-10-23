@@ -1,9 +1,42 @@
 @import-normalize;
 
 
+$primary-black: #101010;
+$primary-white: #FFF;
+$section-background: #eff5f3;
+$muted-gray: #808080;
+$navigation-arrows-background: #EEEEEECF;
+
+$rounded-button-background: #e22278;
+$rounded-button-background-hover: #ea0069;
+
+@mixin section-title-styles {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: $primary-black;
+    text-transform: uppercase;
+}
+
+@mixin navigation-arrows-styles {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    background-image: url(./arrow.svg);
+    background-repeat: no-repeat;
+    background-color: $navigation-arrows-background;
+    height: 4.2rem;
+    width: 4.5rem;
+    background-position: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+}
+
 .ubiheader {
-    background: #000;
-    color: #FFF;
+    background: $primary-black;
+    color: $primary-white;
 
     .ubinav {
 
@@ -17,21 +50,34 @@
 
             .ubinav__listitem {
                 text-transform: uppercase;
-                margin: 1.2rem 2.2rem;
+                margin: .5rem 2rem;
+                border-bottom: 4px solid $primary-black;
+
+                &:hover {
+                    cursor: pointer;
+                    border-bottom: 4px solid $primary-white;
+                }
             }
         }
     }
 }
 
+.section-title {
+    @include section-title-styles;
+}
 
-// More Games section
+.section-title__featured {
+    @include section-title-styles;
+}
+
+
+// More Games section start
 .more-games {
-    background-color: #eff5f3;
-    padding: 3rem 2rem;
-
+    background-color: $section-background;
+    padding: 3rem 0rem;
 
     .more-games__grid {
-        padding: 0rem 2rem;
+        padding: 0rem 8rem;
         display: grid;
         grid-column-gap: 3.5rem;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -42,7 +88,7 @@
         }
 
         .game-title {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 600;
         }
 
@@ -51,33 +97,37 @@
         }
 
         .game-year {
-            font-size: 1.2rem;
-            color: gray;
+            font-size: 1.5rem;
+            color: $muted-gray;
         }
 
         .system {
-            margin-right: 3px;
+            margin-right: .3rem;
         }
 
         .system__stadia {
-            width: 15px;
-            max-width: 15px;
-            height: 15px;
-            max-height: 15px;
+            width: 2rem;
+            max-width: 2rem;
+            height: 2rem;
+            max-height: 2rem;
         }
     }
 
 }
 
+// More Games section ends
+
+// Featured Videos Styles start
+
 .featured-videos {
-    background-color: #eff5f3;
+    background-color: $section-background;
     padding: 3rem 2rem;
 
     .featured-videos__grid {
         padding: 0rem 2rem;
         display: grid;
-        grid-column-gap: 75px;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-column-gap: 7.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
         .video-wrapper {
             position: relative;
@@ -89,8 +139,8 @@
             }
 
             .video-title {
-                font-size: 1.6rem;
-                font-weight: 600;
+                font-size: 2.2rem;
+                font-weight: 700;
             }
 
             .video-play-icon {
@@ -101,26 +151,12 @@
             }
         }
 
-
     }
 }
 
-.arrow {
-    background-image: url(./arrow.svg);
-    background-repeat: no-repeat, repeat;
-    height: 2.2rem;
-    width: 1.4rem;
-    cursor: pointer;
-}
+// Featured Videos Styles end
 
-.arrow--right {
-    background-image: url(./arrow.svg);
-    background-repeat: no-repeat, repeat;
-    height: 2.2rem;
-    width: 1.4rem;
-    transform: rotate(180deg);
-    cursor: pointer;
-}
+// Slide show navigation styles start
 
 .slider-controls {
     display: flex;
@@ -128,24 +164,16 @@
     align-items: center;
 }
 
-.section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #000;
-    text-transform: uppercase;
+.arrow {
+    @include navigation-arrows-styles;
 }
 
-.section-title__featured {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: #000;
-    text-transform: uppercase;
+.arrow--right {
+    @include navigation-arrows-styles;
+    transform: rotate(180deg);
 }
 
+// Slide show navigation styles end
 
 .btn-container {
     display: flex;
@@ -156,61 +184,92 @@
     .btn-rounded {
         font-size: 1.6rem;
         font-weight: 700;
-        background-color: #e22278;
-        color: #FFF;
+        background-color: $rounded-button-background;
+        color: $primary-white;
         text-transform: uppercase;
         padding: 2rem 6rem;
         width: auto;
-        border: 1px solid #e22278;
+        border: 1px solid $rounded-button-background;
         border-radius: 3rem;
         cursor: pointer;
-    }
 
+        &:hover {
+            background-color: $rounded-button-background-hover;
+        }
+    }
 }
+
+// Modal styles start
 
 .modal {
     position: fixed;
-    /* Stay in place */
     z-index: 1;
     /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
     /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.771);
+    background-color: rgba(0, 0, 0, 0.92);
     /* Black w/ opacity */
     display: flex;
     justify-content: center;
     align-items: center;
 
     .modal-content-wrapper {
-
+        margin: 0rem 1rem;
 
         .btn-close {
-            position: absolute;
-            left: 94%;
+            width: 40px;
+            height: 40px;
+            font-size: 2rem;
+            float: right;
+            background-color: $primary-black;
+            border: .2rem solid $primary-white;
+            color: $primary-white;
+            border-radius: 2.5rem;
+            padding: .5rem 0.5rem;
+            cursor: pointer;
+            transition: background-color .1s linear;
+
+            &:hover {
+                background-color: rgb(74, 74, 74)
+            }
         }
 
         .btn-play {
             position: absolute;
-            color: red;
-            top: 50%;
+            top: 55%;
             left: 50%;
             transform: translate(-50%, -50%);
+            width: 4.5rem;
+            max-width: 4.5rem;
+            height: 4.5rem;
+            max-height: 4.5rem;
+            z-index: 3;
+        }
+
+        @media only screen and (min-width: 600px) {
+            .btn-play {
+                width: 6.5rem;
+                max-width: 6.5rem;
+                height: 6.5rem;
+                max-height: 6.5rem;
+            }
         }
 
         .modal-content-title {
             margin-bottom: 1rem;
-            color: #FFF;
+            color: $primary-white;
+        }
 
+        .modal-content-poster {
+            position: relative;
+            width: 100%;
         }
     }
 
-
 }
+
+// Modal styles end
