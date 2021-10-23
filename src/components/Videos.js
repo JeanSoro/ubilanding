@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export default function Videos({ playIcon, id, title, poster, toggleModal }) {
 
@@ -10,4 +11,12 @@ export default function Videos({ playIcon, id, title, poster, toggleModal }) {
         </article>
     )
 
+}
+
+Videos.propTypes = {
+    poster: PropTypes.string.isRequired,
+    playIcon: PropTypes.string.isRequired,
+    id: PropTypes.number,
+    title: PropTypes.string.isRequired,
+    toggleModal: PropTypes.func.isRequired
 }

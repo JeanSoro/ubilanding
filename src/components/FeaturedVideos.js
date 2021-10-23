@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
 import Videos from './Videos';
 import RoundedButton from './RoundedButton';
 import featuredVideosData from '../featuredVideosData';
-import playIcon from '../download.svg'
+import playIcon from '../download.svg';
+
 
 export default function FeaturedVideos({ toggleModal }) {
     return (
@@ -28,5 +30,7 @@ export default function FeaturedVideos({ toggleModal }) {
     )
 }
 
-
+FeaturedVideos.propTypes = {
+    toggleModal: PropTypes.func.isRequired
+}
 

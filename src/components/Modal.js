@@ -1,5 +1,6 @@
-import React from 'react'
-import playIcon from '../download.svg'
+import React from 'react';
+import PropTypes from 'prop-types';
+import playIcon from '../download.svg';
 
 export default function Modal({ closeModal, featuredVideoTitle, featuredVideoPoster }) {
 
@@ -14,4 +15,11 @@ export default function Modal({ closeModal, featuredVideoTitle, featuredVideoPos
             </div>
         </div>
     )
+}
+
+
+Modal.propTypes = {
+    closeModal: PropTypes.func.isRequired,
+    featuredVideoTitle: PropTypes.string.isRequired,
+    featuredVideoPoster: PropTypes.string.isRequired,
 }
