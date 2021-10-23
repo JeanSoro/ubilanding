@@ -1,6 +1,5 @@
 @import-normalize;
 
-
 $primary-black: #101010;
 $primary-white: #FFF;
 $section-background: #eff5f3;
@@ -34,12 +33,17 @@ $rounded-button-background-hover: #ea0069;
     background: $navigation-arrows-background;
     width: 5.5rem;
     height: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
 }
-
 
 
 .ubiheader {
@@ -65,12 +69,17 @@ $rounded-button-background-hover: #ea0069;
         }
 
         .ubinav__list {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -ms-flex-wrap: wrap;
             flex-wrap: wrap;
             list-style: none;
             font-size: 1.5rem;
             padding: 1rem 0rem;
             margin: 0px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
             justify-content: center;
 
             .ubinav__listitem {
@@ -179,10 +188,10 @@ $rounded-button-background-hover: #ea0069;
                 position: absolute;
                 top: 40%;
                 left: 50%;
+                -webkit-transform: translate(-50%, -50%);
                 transform: translate(-50%, -50%);
             }
         }
-
     }
 }
 
@@ -191,8 +200,14 @@ $rounded-button-background-hover: #ea0069;
 // Slide show navigation styles start
 
 .slider-controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -216,8 +231,14 @@ $rounded-button-background-hover: #ea0069;
 // Slide show navigation styles end
 
 .btn-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-top: 2rem;
 
@@ -253,10 +274,15 @@ $rounded-button-background-hover: #ea0069;
     /* Fallback color */
     background-color: rgba(0, 0, 0, 0.92);
     /* Black w/ opacity */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
 
     .modal-content-wrapper {
         margin: 0rem 1rem;
@@ -272,6 +298,7 @@ $rounded-button-background-hover: #ea0069;
             border-radius: 2.5rem;
             padding: .5rem 0.5rem;
             cursor: pointer;
+            -webkit-transition: background-color .1s linear;
             transition: background-color .1s linear;
 
             &:hover {
@@ -285,6 +312,7 @@ $rounded-button-background-hover: #ea0069;
             position: absolute;
             top: 55%;
             left: 50%;
+            -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
             width: 4.5rem;
             max-width: 4.5rem;
@@ -339,9 +367,18 @@ $rounded-button-background-hover: #ea0069;
 
     ul {
         padding: 0rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -355,7 +392,6 @@ $rounded-button-background-hover: #ea0069;
     &.active {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-
     }
 
     .btn-close-mobile-menu {
