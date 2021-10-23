@@ -29,7 +29,7 @@ function App() {
         <MoreGames />
         <FeaturedVideos toggleModal={toggleModal} />
         {
-          showModal ? <Modal featuredVideoPoster={featuredVideoPoster} featuredVideoTitle={featuredVideoTitle} closeModal={closeModal} /> : null
+          showModal ? <Modal featuredVideoPoster={featuredVideoPoster} featuredVideoTitle={featuredVideoTitle} closeModal={closeModal} showModal={showModal} /> : null
         }
       </main>
     </>

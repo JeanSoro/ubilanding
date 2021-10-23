@@ -36,10 +36,10 @@ Games.propTypes = {
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,
-    xbox_logo: PropTypes.string.isRequired,
-    ps4_logo: PropTypes.string.isRequired,
-    windows_logo: PropTypes.string.isRequired,
-    stadia_logo: PropTypes.string.isRequired,
-    switch_logo: PropTypes.string.isRequired,
+    xbox_logo: PropTypes.string,
+    ps4_logo: PropTypes.string,
+    windows_logo: PropTypes.string,
+    stadia_logo: PropTypes.string,
+    switch_logo: PropTypes.string,
 }
 

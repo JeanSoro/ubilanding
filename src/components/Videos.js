@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function Videos({ playIcon, id, title, poster, toggleModal }) {
@@ -10,7 +10,6 @@ export default function Videos({ playIcon, id, title, poster, toggleModal }) {
             <p className="video-title">{title}</p>
         </article>
     )
-
 }
 
 Videos.propTypes = {

@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import Games from './Games'
+import React, { useState } from 'react';
+import Games from './Games';
 import RoundedButton from './RoundedButton';
 import gamesData from '../gamesData';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function MoreGames() {
-    const [gamesShow, setGamesShow] = useState(gamesData)
+    const [gamesShow, setGamesShow] = useState(gamesData);
     const newGamesShow = [...gamesShow];
  
     const viewPrev = () => {
@@ -38,11 +39,15 @@ export default function MoreGames() {
                 }
             </div>
             <div className="slider-controls">
-                <button type="button" className="arrow" onClick={viewPrev}></button>
+               <button type="button" className="arrow-container">
+                    <FaChevronLeft className="arrow" onClick={viewPrev}/>
+               </button>
                 <div className="btn-container">
                     <RoundedButton btnText="view all games" />
                 </div>
-                <button type="button" className="arrow--right" onClick={viewNext}></button>
+                <button type="button" className="arrow-container__right">
+                    <FaChevronRight className="arrow" onClick={viewNext}/>
+               </button>
             </div>
         </section>
     )
