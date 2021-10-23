@@ -4,7 +4,7 @@ import featuredVideosData from '../featuredVideosData';
 import download from '../download.svg'
 
 
-export default function FeaturedVideos() {
+export default function FeaturedVideos({ toggleModal }) {
     return (
         <section className="featured-videos">
             <h1 className="section-title__featured">featured videos</h1>
@@ -13,13 +13,11 @@ export default function FeaturedVideos() {
                 {
                     featuredVideosData.map((featuredVideo, index) => {
                         return (
-                            <Videos key={index} download={download} {...featuredVideo} />
+                            <Videos key={index} download={download} {...featuredVideo} toggleModal={toggleModal} />
                         )
                     })
                 }
             </div>
-
-
 
 
             <div className="btn-container">
