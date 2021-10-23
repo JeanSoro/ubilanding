@@ -7,15 +7,19 @@ export default function MoreGames() {
     const newGamesShow = [...gamesShow];
     console.log(newGamesShow)
 
-    const viewNext = () => {
+    const viewPrev = () => {
         if (newGamesShow.length - 1 > 0) {
             setGamesShow(newGamesShow.slice(5, 9))
+        } else if (newGamesShow.length === 4 || newGamesShow.length === 0) {
+            setGamesShow(games)
         }
     }
 
-    const viewPrev = () => {
+    const viewNext = () => {
         if (newGamesShow.length === 4 || newGamesShow.length === 0) {
             setGamesShow(games)
+        } else if (newGamesShow.length - 1 > 0) {
+            setGamesShow(newGamesShow.slice(5, 9))
         }
     }
 
