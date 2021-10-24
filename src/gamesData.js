@@ -59,7 +59,7 @@ const gamesData = [
         title: `Hyper Scape`,
         year: 'PLAY NOW',
         image:
-            './assets/explore-more-games-sample-6.jpg',
+            './assets/explore-more-games-sample-hyperscape.jpg',
 
         windows_logo:
             "./assets/windows.svg",
@@ -85,10 +85,10 @@ const gamesData = [
     },
     {
         id: 7,
-        title: `Watch Dogs: Legion`,
-        year: 'COMING SOON',
+        title: `Scott Pilgrim vs. The World: The Game`,
+        year: '2020',
         image:
-            './assets/explore-more-games-sample-1.jpg',
+            './assets/explore-more-games-sample-4.jpg',
         xbox_logo:
             "./assets/xbox.svg",
         ps4_logo:
@@ -103,7 +103,7 @@ const gamesData = [
         title: `Hyper Scape`,
         year: 'PLAY NOW',
         image:
-            './assets/explore-more-games-sample-6.jpg',
+            './assets/explore-more-games-sample-hyperscape.jpg',
 
         windows_logo:
             "./assets/windows.svg",

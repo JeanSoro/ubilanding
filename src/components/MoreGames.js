@@ -11,9 +11,9 @@ export default function MoreGames() {
     // Handler for getting previous set of video game cards
     const viewPrev = () => {
         if (newGamesShow.length - 1 > 0) {
-            setGamesShow(newGamesShow.slice(5, 9))
-        } else if (newGamesShow.length === 4 || newGamesShow.length === 0) {
             setGamesShow(gamesData)
+        } else if (newGamesShow.length === 4 || newGamesShow.length === 0) {
+            setGamesShow(newGamesShow.slice(6, 10))
         }
     }
 
@@ -22,7 +22,7 @@ export default function MoreGames() {
         if (newGamesShow.length === 4 || newGamesShow.length === 0) {
             setGamesShow(gamesData)
         } else if (newGamesShow.length - 1 > 0) {
-            setGamesShow(newGamesShow.slice(5, 9))
+            setGamesShow(newGamesShow.slice(6, 10))
         }
     }
 

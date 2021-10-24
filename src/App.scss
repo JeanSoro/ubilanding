@@ -43,6 +43,10 @@ $rounded-button-background-hover: #ea0069;
     -ms-flex-align: center;
     align-items: center;
     cursor: pointer;
+
+    &:hover {
+        background: #cfcaca;
+    }
 }
 
 
@@ -50,6 +54,9 @@ $rounded-button-background-hover: #ea0069;
     background: $primary-black;
     color: $primary-white;
     cursor: pointer;
+    width: 100%;
+    position: fixed;
+    padding: 4px 0px;
 
     .ubinav {
 
@@ -62,10 +69,34 @@ $rounded-button-background-hover: #ea0069;
             left: 1.5rem;
         }
 
+
+        .ubi-logo {
+            width: 100px;
+            margin-left: 26px;
+            position: relative;
+            top: -15px;
+            left: 27%;
+        }
+
         @media only screen and (min-width: 415px) {
             .hamburger-menu-icon {
                 display: none;
             }
+
+            .ubi-logo {
+                width: 100px;
+                margin-left: 2.6rem;
+                position: unset;
+                top: 0px;
+                left: 0%;
+            }
+        }
+
+
+        .ubi-logo-nav-list-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .ubinav__list {
@@ -116,11 +147,12 @@ $rounded-button-background-hover: #ea0069;
 .more-games {
     background-color: $section-background;
     padding: 3rem 0rem;
+    padding-top: 8rem;
 
     .more-games__grid {
         padding: 0rem 8rem;
         display: grid;
-        grid-column-gap: 3.5rem;
+        grid-column-gap: 4.2rem;
         grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
 
         .game-poster {
@@ -135,6 +167,7 @@ $rounded-button-background-hover: #ea0069;
 
         .systems-container {
             margin-bottom: 1.5rem;
+
         }
 
         .game-year {
@@ -144,6 +177,8 @@ $rounded-button-background-hover: #ea0069;
 
         .system {
             margin-right: .3rem;
+            width: 2rem;
+            height: 2rem;
         }
 
         .system__stadia {
@@ -338,6 +373,8 @@ $rounded-button-background-hover: #ea0069;
         .modal-content-poster {
             position: relative;
             width: 100%;
+            border: 2px solid #fff;
+            border-radius: 6px;
         }
     }
 

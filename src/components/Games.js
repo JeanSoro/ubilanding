@@ -6,7 +6,7 @@ export default function Games({ title, year, image, xbox_logo, ps4_logo,
 
     return (
         <article>
-            <img className="game-poster" src={image} alt={title} />
+            <img className="game-poster" src={image} alt={title} loading="lazy" />
             <p className="game-title">{title}</p>
             <p className="game-year">{year}</p>
             <div className="systems-container">
