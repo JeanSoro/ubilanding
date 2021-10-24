@@ -12,17 +12,17 @@ export default function MoreGames() {
     const viewPrev = () => {
         if (newGamesShow.length - 1 > 0) {
             setGamesShow(gamesData)
-        } else if (newGamesShow.length === 4 || newGamesShow.length === 0) {
-            setGamesShow(newGamesShow.slice(6, 10))
+        } else if (newGamesShow.length === 5 || newGamesShow.length === 0) {
+            setGamesShow(newGamesShow.slice(5, 10))
         }
     }
 
     // Handler for getting next set of video game cards
     const viewNext = () => {
-        if (newGamesShow.length === 4 || newGamesShow.length === 0) {
+        if (newGamesShow.length === 5 || newGamesShow.length === 0) {
             setGamesShow(gamesData)
         } else if (newGamesShow.length - 1 > 0) {
-            setGamesShow(newGamesShow.slice(6, 10))
+            setGamesShow(newGamesShow.slice(5, 10))
         }
     }
 
@@ -33,7 +33,7 @@ export default function MoreGames() {
             </header>
             <div className="more-games__grid">
                 {
-                    newGamesShow.slice(0, 6).map((gamesList, index) => {
+                    newGamesShow.slice(0, 5).map((gamesList, index) => {
                         return (
                             <Games key={index} {...gamesList} />
                         )
