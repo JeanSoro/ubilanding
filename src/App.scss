@@ -150,10 +150,52 @@ $rounded-button-background-hover: #ea0069;
     padding-top: 8rem;
 
     .more-games__grid {
-        padding: 0rem 8rem;
+        grid-template-columns: repeat(5, 19%);
+        grid-column-gap: .5rem;
+        padding: 0rem .6rem;
         display: grid;
-        grid-column-gap: 4.2rem;
-        grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+    }
+
+    .game-poster {
+        height: auto;
+        width: 100%;
+    }
+
+    .game-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+
+    .systems-container {
+        margin-bottom: 1.5rem;
+    }
+
+    .game-year {
+        font-size: 1.3rem;
+        color: $muted-gray;
+    }
+
+    .system {
+        margin-right: .3rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .system__stadia {
+        width: 1.5rem;
+        max-width: 1.5rem;
+        height: 1.5rem;
+        max-height: 1.5rem;
+    }
+
+    @media only screen and (min-width: 920px) {
+
+        .more-games__grid {
+            grid-column-gap: 3.5rem;
+            grid-template-columns: repeat(5, 1fr);
+            padding: 0rem 6.5rem;
+        }
 
         .game-poster {
             height: 310px;
@@ -162,23 +204,15 @@ $rounded-button-background-hover: #ea0069;
 
         .game-title {
             font-size: 2.2rem;
-            font-weight: 600;
-        }
-
-        .systems-container {
-            margin-bottom: 1.5rem;
-
         }
 
         .game-year {
             font-size: 1.5rem;
-            color: $muted-gray;
         }
 
         .system {
-            margin-right: .3rem;
-            width: 2rem;
-            height: 2rem;
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
         .system__stadia {
@@ -188,7 +222,6 @@ $rounded-button-background-hover: #ea0069;
             max-height: 2rem;
         }
     }
-
 }
 
 // More Games section ends
@@ -198,37 +231,53 @@ $rounded-button-background-hover: #ea0069;
 .featured-videos {
     background-color: $section-background;
     padding: 3rem 2rem;
+    position: relative;
+}
+
+.featured-videos__grid {
+    padding: 0rem 2rem;
+    display: grid;
+    grid-column-gap: 7.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+@media only screen and (min-width: 600px) {
+    .featured-videos {
+        padding: 3rem 12rem 8rem;
+
+    }
 
     .featured-videos__grid {
-        padding: 0rem 2rem;
-        display: grid;
-        grid-column-gap: 7.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding: 0rem 0rem;
 
-        .video-wrapper {
-            position: relative;
-            cursor: pointer;
-
-            .video-poster {
-                height: 245px;
-                width: 100%;
-            }
-
-            .video-title {
-                font-size: 2.2rem;
-                font-weight: 700;
-            }
-
-            .video-play-icon {
-                position: absolute;
-                top: 40%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-            }
-        }
     }
 }
+
+.video-wrapper {
+    position: relative;
+    cursor: pointer;
+
+    .video-poster {
+        height: 245px;
+        width: 100%;
+    }
+
+    .video-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .video-play-icon {
+        position: absolute;
+        width: 4rem;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+}
+
+
 
 // Featured Videos Styles end
 
@@ -278,12 +327,12 @@ $rounded-button-background-hover: #ea0069;
     margin-top: 2rem;
 
     .btn-rounded {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         font-weight: 700;
         background-color: $rounded-button-background;
         color: $primary-white;
         text-transform: uppercase;
-        padding: 2rem 6rem;
+        padding: 2rem 4rem;
         width: auto;
         border: 1px solid $rounded-button-background;
         border-radius: 3rem;
@@ -291,6 +340,15 @@ $rounded-button-background-hover: #ea0069;
 
         &:hover {
             background-color: $rounded-button-background-hover;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        .btn-rounded {
+            font-size: 1.6rem;
+            padding: 2rem 6rem;
+
+
         }
     }
 }

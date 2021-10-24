@@ -6,23 +6,20 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 export default function MoreGames() {
     const [gamesShow, setGamesShow] = useState(gamesData);
-    const newGamesShow = [...gamesShow];
 
     // Handler for getting previous set of video game cards
     const viewPrev = () => {
-        if (newGamesShow.length - 1 > 0) {
+        if (gamesShow.length - 1 > 0) {
             setGamesShow(gamesData)
-        } else if (newGamesShow.length === 5 || newGamesShow.length === 0) {
-            setGamesShow(newGamesShow.slice(5, 10))
         }
     }
 
     // Handler for getting next set of video game cards
     const viewNext = () => {
-        if (newGamesShow.length === 5 || newGamesShow.length === 0) {
+        if (gamesShow.length === 5 || gamesShow.length === 0) {
             setGamesShow(gamesData)
-        } else if (newGamesShow.length - 1 > 0) {
-            setGamesShow(newGamesShow.slice(5, 10))
+        } else if (gamesShow.length - 1 > 0) {
+            setGamesShow(gamesShow.slice(5, 10))
         }
     }
 
@@ -33,7 +30,7 @@ export default function MoreGames() {
             </header>
             <div className="more-games__grid">
                 {
-                    newGamesShow.slice(0, 5).map((gamesList, index) => {
+                    gamesShow.slice(0, 5).map((gamesList, index) => {
                         return (
                             <Games key={index} {...gamesList} />
                         )
@@ -41,14 +38,14 @@ export default function MoreGames() {
                 }
             </div>
             <div className="slider-controls">
-                <button type="button" className="arrow-container">
-                    <FaChevronLeft className="arrow" onClick={viewPrev} />
+                <button type="button" className="arrow-container" onClick={viewPrev}>
+                    <FaChevronLeft className="arrow" />
                 </button>
                 <div className="btn-container">
                     <RoundedButton btnText="view all games" />
                 </div>
-                <button type="button" className="arrow-container__right">
-                    <FaChevronRight className="arrow" onClick={viewNext} />
+                <button type="button" className="arrow-container__right" onClick={viewNext} >
+                    <FaChevronRight className="arrow" />
                 </button>
             </div>
         </section>
