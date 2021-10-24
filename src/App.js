@@ -3,8 +3,6 @@ import React, { Suspense, useState } from 'react';
 import Header from './components/Header';
 import MoreGames from './components/MoreGames';
 import FeaturedVideos from './components/FeaturedVideos';
-
-
 const Modal = React.lazy(() => import('./components/Modal'));
 const MobileMenu = React.lazy(() => import('./components/MobileMenu'));
 
@@ -26,7 +24,6 @@ function App() {
     setShowModal(false)
   }
 
-
   // Mobile menu handlers
   const toggleMobileMenu = () => {
     setShowMobileMenu(prev => !prev)
@@ -35,7 +32,6 @@ function App() {
   const closeMobileMenu = () => {
     setShowMobileMenu(false);
   }
-
 
   return (
     <>
