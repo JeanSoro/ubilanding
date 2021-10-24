@@ -1,6 +1,7 @@
 @import-normalize;
 
 $primary-black: #101010;
+$header-black: #000;
 $primary-white: #FFF;
 $section-background: #eff5f3;
 $muted-gray: #808080;
@@ -51,7 +52,7 @@ $rounded-button-background-hover: #ea0069;
 
 
 .ubiheader {
-    background: $primary-black;
+    background: $header-black;
     color: $primary-white;
     cursor: pointer;
     width: 100%;
@@ -72,6 +73,7 @@ $rounded-button-background-hover: #ea0069;
 
         .ubi-logo {
             width: 100px;
+            height: auto;
             margin-left: 26px;
             position: relative;
             top: -15px;
