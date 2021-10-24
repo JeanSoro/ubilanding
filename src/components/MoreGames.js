@@ -38,13 +38,13 @@ export default function MoreGames() {
                 }
             </div>
             <div className="slider-controls">
-                <button type="button" className="arrow-container" onClick={viewPrev}>
+                <button type="button" className="arrow-container" aria-label="Previous Arrow Button" onClick={viewPrev}>
                     <FaChevronLeft className="arrow" />
                 </button>
                 <div className="btn-container">
                     <RoundedButton btnText="view all games" />
                 </div>
-                <button type="button" className="arrow-container__right" onClick={viewNext} >
+                <button type="button" className="arrow-container__right" aria-label="Next Arrow button" onClick={viewNext} >
                     <FaChevronRight className="arrow" />
                 </button>
             </div>

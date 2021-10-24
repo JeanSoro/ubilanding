@@ -6,7 +6,7 @@ export default function Modal({ showModal, closeModal, featuredVideoTitle, featu
     return (
         <div className='modal'>
             <div className="modal-content-wrapper">
-                <button className="btn-close" onClick={closeModal}>X</button>
+                <button className="btn-close" aria-label="Close Modal Window" onClick={closeModal}>X</button>
                 <img className="btn-play" src={playIcon} alt="play button icon" />
                 <h1 className="modal-content-title">{featuredVideoTitle}</h1>
                 <img className="modal-content-poster" src={featuredVideoPoster} alt={featuredVideoTitle} />
