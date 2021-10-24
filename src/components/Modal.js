@@ -7,9 +7,9 @@ export default function Modal({ showModal, closeModal, featuredVideoTitle, featu
         <div className='modal'>
             <div className="modal-content-wrapper">
                 <button className="btn-close" aria-label="Close Modal Window" onClick={closeModal}>X</button>
-                <img className="btn-play" src={playIcon} alt="play button icon" />
+                <img className="btn-play" src={playIcon} alt="play button icon" loading="lazy" />
                 <h1 className="modal-content-title">{featuredVideoTitle}</h1>
-                <img className="modal-content-poster" src={featuredVideoPoster} alt={featuredVideoTitle} />
+                <img className="modal-content-poster" src={featuredVideoPoster} alt={featuredVideoTitle} loading="lazy" />
             </div>
         </div>
     )

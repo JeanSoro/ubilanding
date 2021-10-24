@@ -40,11 +40,11 @@ function App() {
         <MoreGames />
         <FeaturedVideos toggleModal={toggleModal} />
         {
-          showModal ? <Suspense fallback={<div>Loading...</div>}>
+          showModal && <Suspense fallback={<div>Loading...</div>}>
             <Modal featuredVideoPoster={featuredVideoPoster}
               featuredVideoTitle={featuredVideoTitle}
               closeModal={closeModal} showModal={showModal} />
-          </Suspense> : null
+          </Suspense>
         }
         <Suspense fallback={<div>Loading menu...</div>}>
           <MobileMenu showMobileMenu={showMobileMenu} closeMobileMenu={closeMobileMenu} />
