@@ -1,10 +1,12 @@
 import './App.scss';
-import { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import Header from './components/Header';
-import MobileMenu from './components/MobileMenu';
 import MoreGames from './components/MoreGames';
 import FeaturedVideos from './components/FeaturedVideos';
-import Modal from './components/Modal';
+
+
+const Modal = React.lazy(() => import('./components/Modal'));
+const MobileMenu = React.lazy(() => import('./components/MobileMenu'));
 
 function App() {
 
@@ -42,11 +44,15 @@ function App() {
         <MoreGames />
         <FeaturedVideos toggleModal={toggleModal} />
         {
-          showModal ? <Modal featuredVideoPoster={featuredVideoPoster}
-            featuredVideoTitle={featuredVideoTitle}
-            closeModal={closeModal} showModal={showModal} /> : null
+          showModal ? <Suspense fallback={<div>Loading...</div>}>
+            <Modal featuredVideoPoster={featuredVideoPoster}
+              featuredVideoTitle={featuredVideoTitle}
+              closeModal={closeModal} showModal={showModal} />
+          </Suspense> : null
         }
-        <MobileMenu showMobileMenu={showMobileMenu} closeMobileMenu={closeMobileMenu} />
+        <Suspense fallback={<div>Loading menu...</div>}>
+          <MobileMenu showMobileMenu={showMobileMenu} closeMobileMenu={closeMobileMenu} />
+        </Suspense>
       </main>
     </>
   );
