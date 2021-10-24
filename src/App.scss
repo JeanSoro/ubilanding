@@ -492,6 +492,9 @@ $rounded-button-background-hover: #ea0069;
     }
 
     .btn-close-mobile-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         left: 83%;
         color: $primary-white;
