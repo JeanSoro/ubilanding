@@ -164,7 +164,7 @@ $rounded-button-background-hover: #ea0069;
     }
 
     .game-title {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         font-weight: 600;
     }
 
@@ -180,8 +180,8 @@ $rounded-button-background-hover: #ea0069;
 
     .system {
         margin-right: .3rem;
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
     }
 
     .system__stadia {
@@ -213,8 +213,9 @@ $rounded-button-background-hover: #ea0069;
         }
 
         .system {
-            width: 1.5rem;
-            height: 1.5rem;
+            margin-right: .3rem;
+            width: 2rem;
+            height: 2rem;
         }
 
         .system__stadia {

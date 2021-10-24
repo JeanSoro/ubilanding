@@ -44,7 +44,7 @@ const gamesData = [
         title: `Far Cry 6`,
         year: 'COMING SOON',
         image:
-            './assets/explore-more-games-sample-cry.jpeg',
+            './assets/explore-more-games-sample-cry.png',
         xbox_logo:
             "./assets/xbox.svg",
         ps4_logo:
